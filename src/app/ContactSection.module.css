@@ -1,0 +1,421 @@
+/* ContactSection.module.css - Refined Elegant Edition */
+
+/* Base styles */
+.contactSection {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  overflow: hidden;
+  
+  /* Subtle transparent background */
+  background: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Elegant gradient title */
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.01em;
+  position: relative;
+  background: linear-gradient(#00BFFF, #8A2BE2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Subtle underline */
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #64748b, #94a3b8);
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Transparent Glass Card Base */
+.glassCard {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 4px 24px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Contact Info Transparent Card */
+.infoCard {
+  flex: 0 0 35%;
+  padding: 50px 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 4px 24px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.infoItem {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+}
+
+/* Minimal icon background */
+.infoItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(148, 163, 184, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.infoValue {
+  font-size: 1rem;
+  color: rgba(248, 250, 252, 0.9);
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.infoValue:hover {
+  color: rgba(203, 213, 225, 1);
+}
+
+/* Contact Form Transparent Card */
+.formCard {
+  flex: 1;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 4px 24px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.formCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+/* Minimal Input Fields */
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  color: rgba(248, 250, 252, 0.9);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.02);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: rgba(148, 163, 184, 0.5);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(203, 213, 225, 0.3);
+  box-shadow: 
+    0 0 0 3px rgba(203, 213, 225, 0.06),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Elegant Submit Button */
+.submitButton {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, rgba(100, 116, 139, 0.15), rgba(148, 163, 184, 0.15));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+  box-shadow: 
+    0 4px 12px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle button hover animation */
+.submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.submitButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(100, 116, 139, 0.2), rgba(148, 163, 184, 0.2));
+  transform: translateY(-1px);
+  box-shadow: 
+    0 6px 20px 0 rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  border-color: rgba(203, 213, 225, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.submitButton span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Response Message */
+.responseMessage {
+  padding: 16px 20px;
+  margin-top: 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: slideUp 0.4s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid;
+}
+
+.responseMessage.success {
+  background: rgba(34, 197, 94, 0.05);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.responseMessage.error {
+  background: rgba(239, 68, 68, 0.05);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Email Link */
+.emailLink {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.925rem;
+  color: rgba(148, 163, 184, 0.7);
+}
+
+.emailLink a {
+  color: rgba(203, 213, 225, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.emailLink a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(203, 213, 225, 0.5);
+  transition: width 0.3s ease;
+}
+
+.emailLink a:hover {
+  color: rgba(248, 250, 252, 1);
+}
+
+.emailLink a:hover::after {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner */
+.loadingSpinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 50%;
+  border-top-color: rgba(203, 213, 225, 0.8);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .infoCard {
+    flex: 1;
+    width: 100%;
+  }
+
+  .formCard {
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(12px)) {
+  .infoCard,
+  .formCard {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(51, 65, 85, 0.3);
+  }
+  
+  .formInput,
+  .formTextarea {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.3);
+  }
+}

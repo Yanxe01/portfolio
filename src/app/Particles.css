@@ -1,0 +1,9 @@
+.particles-container {
+  position: fixed;  /* Menggunakan fixed agar tetap di tempat saat scroll */
+  top: 0;
+  left: 0;
+  width: 100%;      /* Memastikan lebar partikel 100% dari layar */
+  height: 100vh;    /* Memastikan tinggi partikel 100% dari layar */
+  z-index: -1;      /* Menempatkan partikel di belakang konten */
+  overflow: hidden; /* Menghindari scroll bar */
+}

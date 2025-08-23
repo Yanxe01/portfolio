@@ -1,0 +1,133 @@
+/* Floating Elements Container */
+.floating-elements-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Individual Floating Element */
+.floating-element {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: subtleFloat 25s infinite linear;
+  opacity: 0.4;
+}
+
+.floating-element i {
+  font-size: 16px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+/* Hover Effects - Subtle */
+.floating-element:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.floating-element:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Developer Tools Styling - Minimal */
+.floating-element.dev-tool {
+  background: rgba(59, 130, 246, 0.04);
+  border-color: rgba(59, 130, 246, 0.08);
+}
+
+.floating-element.dev-tool:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Premier Tools Styling - Minimal */
+.floating-element.premier-tool {
+  background: rgba(245, 101, 101, 0.04);
+  border-color: rgba(245, 101, 101, 0.08);
+}
+
+.floating-element.premier-tool:hover {
+  background: rgba(245, 101, 101, 0.1);
+  border-color: rgba(245, 101, 101, 0.2);
+}
+
+/* Subtle Floating Animation */
+@keyframes subtleFloat {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-15px, -10px);
+  }
+  50% {
+    transform: translate(10px, -5px);
+  }
+  75% {
+    transform: translate(-5px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Gentle fade in/out for some elements */
+.floating-element:nth-child(3n) {
+  animation: subtleFloat 25s infinite linear, gentlePulse 8s infinite ease-in-out;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floating-element {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .floating-element i {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-element {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .floating-element i {
+    font-size: 12px;
+  }
+}
+
+/* Performance Optimization */
+.floating-element {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
