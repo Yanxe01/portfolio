@@ -251,7 +251,7 @@ function HomePage() {
               delay={0.3}
             >
               <TextType 
-                text={["Here, you&apos;ll find my projects, skills, and creative", "work as I continue exploring the world of development and design", 
+                text={["Here, your find my projects, skills, and creative", "work as I continue exploring the world of development and design", 
                   "Building seamless user experiences from front to back", "Crafting stories, one edit at a time", "Designing intuitive interfaces with style and function" 
                 ]} 
                 typingSpeed={75}
@@ -284,7 +284,7 @@ function HomePage() {
               <div className="about-intro">
                 <p className="greeting">Hello, My Name!</p>
                 <TextType 
-                  text={["CHRISTIANTO TRISATRIA LAPU&apos;"]} 
+                  text={["CHRISTIANTO TRISATRIA LAPU'"]} 
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={true}
@@ -389,7 +389,7 @@ function HomePage() {
             <h2 className="projects-title">Projects</h2>
             <div style={{ textAlign: "center", marginBottom: "50px" }}>
               <TextType 
-                text={["Here, you&apos;ll find my projects."]} 
+                text={["Here, you find my projects."]} 
                 typingSpeed={75}
                 pauseDuration={1500}
                 showCursor={true}
@@ -566,7 +566,7 @@ function HomePage() {
           <div className="footer-glass-content">
             <div className="footer-left">
               <span className="footer-text">
-                © 2025 / <span className="footer-name">Christianto Trisatria Lapu&apos;</span> / Build your portfolio with creativity
+                © 2025 / <span className="footer-name">Christianto Trisatria Lapu'</span> / Build your portfolio with creativity
               </span>
             </div>
             <div className="footer-right">
