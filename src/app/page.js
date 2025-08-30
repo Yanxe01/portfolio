@@ -284,7 +284,7 @@ function HomePage() {
               <div className="about-intro">
                 <p className="greeting">Hello, My Name!</p>
                 <TextType 
-                  text={["CHRISTIANTO TRISATRIA LAPU'"]} 
+                  text={["CHRISTIANTO TRISATRIA LAPU"]} 
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={true}
@@ -566,7 +566,7 @@ function HomePage() {
           <div className="footer-glass-content">
             <div className="footer-left">
               <span className="footer-text">
-                © 2025 / <span className="footer-name">Christianto Trisatria Lapu'</span> / Build your portfolio with creativity
+                © 2025 / <span className="footer-name">Christianto Trisatria Lapu</span> / Build your portfolio with creativity
               </span>
             </div>
             <div className="footer-right">
